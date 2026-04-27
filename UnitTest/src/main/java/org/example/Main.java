@@ -14,10 +14,16 @@ public class Main {
 
         double Employee1_salary_expected=8000*12;
         double Employee1_salary_hike_expected=8000+(8000*0.10);
+        double Employee2_salary_expected=100000*12;
+        double Employee2_salary_hike_expected=100000+(100000*0.10);
         EmployeeServiceTest test=new EmployeeServiceTest();
         EmployeeService actualService=new EmployeeService();
+        //testing for Jack
         test.testEmployeeService(actualService.yearlySalary(Employee1.salary()),Employee1_salary_expected,"Jack Yearly service");
         test.testEmployeeService(actualService.calculateHike(Employee1.salary()),Employee1_salary_hike_expected,"Jack Hike service");
+        //Testing for John
+        test.testEmployeeService(actualService.yearlySalary(Employee2.salary()),Employee2_salary_expected,"John Yearly service");
+        test.testEmployeeService(actualService.calculateHike(Employee2.salary()),Employee2_salary_hike_expected,"John Hike service");
     }
 
 
